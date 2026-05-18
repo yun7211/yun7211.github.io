@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>调试 on Yun 的个人博客</title><link>https://yun7211.github.io/tags/%E8%B0%83%E8%AF%95/</link><description>Recent content in 调试 on Yun 的个人博客</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Mon, 18 May 2026 11:30:00 +0800</lastBuildDate><atom:link href="https://yun7211.github.io/tags/%E8%B0%83%E8%AF%95/index.xml" rel="self" type="application/rss+xml"/><item><title>Kernel panic 排查记录模板</title><link>https://yun7211.github.io/embedded-linux/debug-performance/kernel-panic-debugging/</link><pubDate>Mon, 18 May 2026 11:30:00 +0800</pubDate><guid>https://yun7211.github.io/embedded-linux/debug-performance/kernel-panic-debugging/</guid><description>&lt;h2 id="先保留现场"&gt;先保留现场&lt;/h2&gt;
+&lt;p&gt;Kernel panic 出现时，第一件事不是立刻改代码，而是把现场保存下来。串口完整日志、内核版本、设备树版本、启动参数、复现步骤和最近改动都应该保留。&lt;/p&gt;
+&lt;p&gt;最小记录清单：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;panic 完整日志&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;bootargs&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Kernel commit 或版本号&lt;/li&gt;
+&lt;li&gt;DTB 来源&lt;/li&gt;
+&lt;li&gt;根文件系统版本&lt;/li&gt;
+&lt;li&gt;外设连接状态&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="看最后一个有效栈"&gt;看最后一个有效栈&lt;/h2&gt;
+&lt;p&gt;panic 日志里最有价值的是调用栈和触发点。先找到 &lt;code&gt;Call trace&lt;/code&gt;，再判断是空指针、非法地址、BUG_ON、oops 还是 watchdog。&lt;/p&gt;</description></item><item><title>C 内存问题排查清单</title><link>https://yun7211.github.io/c-language/debug-quality/debugging-memory-bugs/</link><pubDate>Mon, 18 May 2026 10:50:00 +0800</pubDate><guid>https://yun7211.github.io/c-language/debug-quality/debugging-memory-bugs/</guid><description>&lt;h2 id="常见现象"&gt;常见现象&lt;/h2&gt;
+&lt;p&gt;C 内存问题经常表现得很绕：崩溃点不一定是出错点，今天能复现的问题明天可能消失，打开日志后问题也可能变化。&lt;/p&gt;
+&lt;p&gt;常见类型包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;数组或缓冲区越界&lt;/li&gt;
+&lt;li&gt;使用已经释放的指针&lt;/li&gt;
+&lt;li&gt;重复释放&lt;/li&gt;
+&lt;li&gt;未初始化读取&lt;/li&gt;
+&lt;li&gt;资源泄漏&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="先缩小范围"&gt;先缩小范围&lt;/h2&gt;
+&lt;p&gt;不要一开始就盯着崩溃现场。先确认最近改动、输入数据规模、线程数量、编译优化级别和是否只在特定平台出现。&lt;/p&gt;</description></item></channel></rss>

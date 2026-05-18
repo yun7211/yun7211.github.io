@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+  <title id="title">Yun avatar</title>
+  <desc id="desc">A clean personal avatar with the letter Y and circuit lines.</desc>
+  <rect width="240" height="240" rx="48" fill="#f2f7f5"/>
+  <circle cx="120" cy="98" r="52" fill="#14796f"/>
+  <path d="M78 70h24l18 32 18-32h24l-31 52v32h-22v-32L78 70Z" fill="#ffffff"/>
+  <path d="M48 178h144" stroke="#14796f" stroke-width="12" stroke-linecap="round"/>
+  <path d="M72 202h96" stroke="#b55239" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="52" cy="52" r="9" fill="#b55239"/>
+  <circle cx="188" cy="52" r="9" fill="#4eb9aa"/>
+  <path d="M52 52h34M154 52h34M52 52v34M188 52v34" stroke="#7c8f86" stroke-width="6" stroke-linecap="round"/>
+</svg>

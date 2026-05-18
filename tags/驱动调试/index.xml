@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>驱动调试 on Yun 的个人博客</title><link>https://yun7211.github.io/tags/%E9%A9%B1%E5%8A%A8%E8%B0%83%E8%AF%95/</link><description>Recent content in 驱动调试 on Yun 的个人博客</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Mon, 18 May 2026 10:10:00 +0800</lastBuildDate><atom:link href="https://yun7211.github.io/tags/%E9%A9%B1%E5%8A%A8%E8%B0%83%E8%AF%95/index.xml" rel="self" type="application/rss+xml"/><item><title>设备树调试的几个检查点</title><link>https://yun7211.github.io/embedded-linux/drivers-dts/device-tree-debugging/</link><pubDate>Mon, 18 May 2026 10:10:00 +0800</pubDate><guid>https://yun7211.github.io/embedded-linux/drivers-dts/device-tree-debugging/</guid><description>&lt;h2 id="为什么设备树容易出问题"&gt;为什么设备树容易出问题&lt;/h2&gt;
+&lt;p&gt;设备树描述硬件，但它本身不会证明硬件真的可用。一个节点看起来完整，也可能因为地址、时钟、中断、复位或引脚复用配置错误而导致驱动 probe 失败。&lt;/p&gt;
+&lt;p&gt;调试设备树时，可以先围绕几个高频字段检查。&lt;/p&gt;
+&lt;h2 id="compatible"&gt;compatible&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;compatible&lt;/code&gt; 决定设备节点能否匹配到驱动。驱动侧通常通过 &lt;code&gt;of_device_id&lt;/code&gt; 表匹配字符串。&lt;/p&gt;
+&lt;p&gt;如果驱动没有 probe，先检查：&lt;/p&gt;</description></item></channel></rss>

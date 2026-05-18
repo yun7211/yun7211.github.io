@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>智能体 on Yun 的个人博客</title><link>https://yun7211.github.io/tags/%E6%99%BA%E8%83%BD%E4%BD%93/</link><description>Recent content in 智能体 on Yun 的个人博客</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Mon, 18 May 2026 12:10:00 +0800</lastBuildDate><atom:link href="https://yun7211.github.io/tags/%E6%99%BA%E8%83%BD%E4%BD%93/index.xml" rel="self" type="application/rss+xml"/><item><title>提示词结构的最小模板</title><link>https://yun7211.github.io/ai/prompt-agents/prompt-structure/</link><pubDate>Mon, 18 May 2026 12:10:00 +0800</pubDate><guid>https://yun7211.github.io/ai/prompt-agents/prompt-structure/</guid><description>&lt;h2 id="为什么需要结构"&gt;为什么需要结构&lt;/h2&gt;
+&lt;p&gt;提示词不是越长越好，而是越清楚越好。一个稳定的提示词应该让模型知道要完成什么、依据什么、不能做什么，以及结果如何判断。&lt;/p&gt;
+&lt;h2 id="最小模板"&gt;最小模板&lt;/h2&gt;
+&lt;p&gt;可以从这个结构开始：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-txt" data-lang="txt"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;目标：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;上下文：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;输入：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;约束：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;输出格式：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;验收标准：
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果任务需要多轮完成，还可以补充“先做什么、后做什么、什么时候停下来问问题”。&lt;/p&gt;
+&lt;h2 id="约束比鼓励更重要"&gt;约束比鼓励更重要&lt;/h2&gt;
+&lt;p&gt;“请认真一点”这类表达很难约束行为。更有效的是明确边界，例如不要修改无关文件、必须引用来源、先运行测试、输出必须包含失败原因。&lt;/p&gt;</description></item></channel></rss>

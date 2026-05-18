@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>指针 on Yun 的个人博客</title><link>https://yun7211.github.io/tags/%E6%8C%87%E9%92%88/</link><description>Recent content in 指针 on Yun 的个人博客</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Mon, 18 May 2026 10:30:00 +0800</lastBuildDate><atom:link href="https://yun7211.github.io/tags/%E6%8C%87%E9%92%88/index.xml" rel="self" type="application/rss+xml"/><item><title>C 语言指针与所有权笔记</title><link>https://yun7211.github.io/c-language/pointer-memory/pointer-and-ownership/</link><pubDate>Mon, 18 May 2026 10:30:00 +0800</pubDate><guid>https://yun7211.github.io/c-language/pointer-memory/pointer-and-ownership/</guid><description>&lt;h2 id="指针问题的本质"&gt;指针问题的本质&lt;/h2&gt;
+&lt;p&gt;C 语言不会替我们记录对象归谁所有、什么时候释放、还能不能访问。很多指针 bug 表面是野指针、重复释放或内存泄漏，背后都是所有权边界不清楚。&lt;/p&gt;
+&lt;p&gt;写 C 代码时，可以主动给指针加上三类语义：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;拥有：负责释放资源&lt;/li&gt;
+&lt;li&gt;借用：只临时使用，不释放&lt;/li&gt;
+&lt;li&gt;输出：函数负责写入结果&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="拥有型指针"&gt;拥有型指针&lt;/h2&gt;
+&lt;p&gt;拥有型指针通常来自 &lt;code&gt;malloc&lt;/code&gt;、资源打开函数或创建函数。谁拥有它，谁就负责释放。&lt;/p&gt;</description></item></channel></rss>

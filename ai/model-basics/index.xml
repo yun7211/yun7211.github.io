@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>模型基础 on Yun 的个人博客</title><link>https://yun7211.github.io/ai/model-basics/</link><description>Recent content in 模型基础 on Yun 的个人博客</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Mon, 18 May 2026 12:00:00 +0800</lastBuildDate><atom:link href="https://yun7211.github.io/ai/model-basics/index.xml" rel="self" type="application/rss+xml"/><item><title>AI 模型选择笔记</title><link>https://yun7211.github.io/ai/model-basics/model-selection-notes/</link><pubDate>Mon, 18 May 2026 12:00:00 +0800</pubDate><guid>https://yun7211.github.io/ai/model-basics/model-selection-notes/</guid><description>&lt;h2 id="不同任务需要不同模型"&gt;不同任务需要不同模型&lt;/h2&gt;
+&lt;p&gt;选择 AI 模型时，不要只看模型名字或排行榜。真正重要的是任务需要什么能力：理解长上下文、写代码、总结资料、调用工具、推理规划，还是快速生成草稿。&lt;/p&gt;
+&lt;p&gt;一个简单的判断方式是先区分任务类型：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;简单改写和摘要：优先速度和成本&lt;/li&gt;
+&lt;li&gt;代码修改和调试：优先上下文理解和可靠性&lt;/li&gt;
+&lt;li&gt;多步骤研究：优先推理能力和工具使用能力&lt;/li&gt;
+&lt;li&gt;大量批处理：优先稳定性、成本和吞吐&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="看上下文而不是只看输入长度"&gt;看上下文而不是只看输入长度&lt;/h2&gt;
+&lt;p&gt;上下文窗口越大，不代表效果一定越好。长上下文任务要关注模型能否抓住关键约束，以及是否会忽略早期信息。&lt;/p&gt;</description></item></channel></rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>科研 on Yun 的个人博客</title><link>https://yun7211.github.io/tags/%E7%A7%91%E7%A0%94/</link><description>Recent content in 科研 on Yun 的个人博客</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Mon, 18 May 2026 11:50:00 +0800</lastBuildDate><atom:link href="https://yun7211.github.io/tags/%E7%A7%91%E7%A0%94/index.xml" rel="self" type="application/rss+xml"/><item><title>研究课题周复盘模板</title><link>https://yun7211.github.io/research/writing-review/research-weekly-review/</link><pubDate>Mon, 18 May 2026 11:50:00 +0800</pubDate><guid>https://yun7211.github.io/research/writing-review/research-weekly-review/</guid><description>&lt;h2 id="为什么做周复盘"&gt;为什么做周复盘&lt;/h2&gt;
+&lt;p&gt;研究任务经常是开放问题，如果只记录最终结果，中间的判断依据很容易丢失。周复盘的目标是留下阶段证据，让下一周知道该继续、收缩还是换方向。&lt;/p&gt;
+&lt;h2 id="推荐结构"&gt;推荐结构&lt;/h2&gt;
+&lt;p&gt;可以固定写这几项：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-txt" data-lang="txt"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;本周目标：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;完成进展：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;关键证据：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;遇到的问题：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;判断变化：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;下周计划：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;需要求助：
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这个结构不复杂，但能覆盖研究推进最重要的信息。&lt;/p&gt;
+&lt;h2 id="关键证据"&gt;关键证据&lt;/h2&gt;
+&lt;p&gt;复盘里最值得保留的是证据，而不是情绪化结论。证据可以是实验结果、日志、图表、论文结论、对比数据或失败复现记录。&lt;/p&gt;</description></item><item><title>研究课题选题框架</title><link>https://yun7211.github.io/research/topic-literature/topic-selection-framework/</link><pubDate>Mon, 18 May 2026 11:00:00 +0800</pubDate><guid>https://yun7211.github.io/research/topic-literature/topic-selection-framework/</guid><description>&lt;h2 id="好课题的几个特征"&gt;好课题的几个特征&lt;/h2&gt;
+&lt;p&gt;一个合适的研究课题不只是“有意思”，还需要能被验证、能在资源约束内推进，并且有清晰产出。&lt;/p&gt;
+&lt;p&gt;可以从四个维度初筛：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;问题是否真实存在&lt;/li&gt;
+&lt;li&gt;是否有明确评价指标&lt;/li&gt;
+&lt;li&gt;当前资源能否支撑实验&lt;/li&gt;
+&lt;li&gt;最终能形成什么产出&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="问题价值"&gt;问题价值&lt;/h2&gt;
+&lt;p&gt;问题价值来自实际需求、理论缺口或工程瓶颈。选题时要能说清楚：如果这个问题被解决，会带来什么变化。&lt;/p&gt;</description></item></channel></rss>

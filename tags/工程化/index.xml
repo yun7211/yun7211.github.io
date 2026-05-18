@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>工程化 on Yun 的个人博客</title><link>https://yun7211.github.io/tags/%E5%B7%A5%E7%A8%8B%E5%8C%96/</link><description>Recent content in 工程化 on Yun 的个人博客</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Mon, 18 May 2026 12:20:00 +0800</lastBuildDate><atom:link href="https://yun7211.github.io/tags/%E5%B7%A5%E7%A8%8B%E5%8C%96/index.xml" rel="self" type="application/rss+xml"/><item><title>AI 功能上线前检查清单</title><link>https://yun7211.github.io/ai/ai-engineering/ai-feature-checklist/</link><pubDate>Mon, 18 May 2026 12:20:00 +0800</pubDate><guid>https://yun7211.github.io/ai/ai-engineering/ai-feature-checklist/</guid><description>&lt;h2 id="为什么需要检查清单"&gt;为什么需要检查清单&lt;/h2&gt;
+&lt;p&gt;AI 功能很容易在演示阶段看起来不错，但上线后遇到长尾输入、成本波动、上下文缺失和不可复现问题。上线前需要把这些风险尽量显性化。&lt;/p&gt;
+&lt;h2 id="数据和上下文"&gt;数据和上下文&lt;/h2&gt;
+&lt;p&gt;先确认模型能看到完成任务所需的信息：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;数据来源是否可靠&lt;/li&gt;
+&lt;li&gt;上下文是否过长或过少&lt;/li&gt;
+&lt;li&gt;用户隐私和敏感信息是否被保护&lt;/li&gt;
+&lt;li&gt;引用或检索结果是否可追溯&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="评测和日志"&gt;评测和日志&lt;/h2&gt;
+&lt;p&gt;至少准备一组代表性样例，覆盖正常输入、边界输入和失败输入。日志要能回答：用了什么提示词、传了什么上下文、模型返回了什么、最终是否被用户接受。&lt;/p&gt;</description></item></channel></rss>

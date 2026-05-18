@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>嵌入式 Linux on Yun 的个人博客</title><link>https://yun7211.github.io/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F-linux/</link><description>Recent content in 嵌入式 Linux on Yun 的个人博客</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Mon, 18 May 2026 11:30:00 +0800</lastBuildDate><atom:link href="https://yun7211.github.io/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F-linux/index.xml" rel="self" type="application/rss+xml"/><item><title>Kernel panic 排查记录模板</title><link>https://yun7211.github.io/embedded-linux/debug-performance/kernel-panic-debugging/</link><pubDate>Mon, 18 May 2026 11:30:00 +0800</pubDate><guid>https://yun7211.github.io/embedded-linux/debug-performance/kernel-panic-debugging/</guid><description>&lt;h2 id="先保留现场"&gt;先保留现场&lt;/h2&gt;
+&lt;p&gt;Kernel panic 出现时，第一件事不是立刻改代码，而是把现场保存下来。串口完整日志、内核版本、设备树版本、启动参数、复现步骤和最近改动都应该保留。&lt;/p&gt;
+&lt;p&gt;最小记录清单：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;panic 完整日志&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;bootargs&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Kernel commit 或版本号&lt;/li&gt;
+&lt;li&gt;DTB 来源&lt;/li&gt;
+&lt;li&gt;根文件系统版本&lt;/li&gt;
+&lt;li&gt;外设连接状态&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="看最后一个有效栈"&gt;看最后一个有效栈&lt;/h2&gt;
+&lt;p&gt;panic 日志里最有价值的是调用栈和触发点。先找到 &lt;code&gt;Call trace&lt;/code&gt;，再判断是空指针、非法地址、BUG_ON、oops 还是 watchdog。&lt;/p&gt;</description></item><item><title>根文件系统构建笔记</title><link>https://yun7211.github.io/embedded-linux/boot-system/rootfs-build-notes/</link><pubDate>Mon, 18 May 2026 10:20:00 +0800</pubDate><guid>https://yun7211.github.io/embedded-linux/boot-system/rootfs-build-notes/</guid><description>&lt;h2 id="根文件系统承担什么"&gt;根文件系统承担什么&lt;/h2&gt;
+&lt;p&gt;Kernel 启动后需要挂载根文件系统，并运行第一个用户态进程。根文件系统里至少要有基础目录、初始化程序、命令工具、动态库、配置文件和设备节点。&lt;/p&gt;
+&lt;p&gt;最小系统常见目录包括：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-txt" data-lang="txt"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;/bin
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;/sbin
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;/etc
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;/lib
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;/dev
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;/proc
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;/sys
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;/tmp
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;/var
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="init"&gt;init&lt;/h2&gt;
+&lt;p&gt;Kernel 默认会尝试运行 &lt;code&gt;/sbin/init&lt;/code&gt;、&lt;code&gt;/etc/init&lt;/code&gt;、&lt;code&gt;/bin/init&lt;/code&gt; 或 &lt;code&gt;/bin/sh&lt;/code&gt;。如果这些路径都不存在，系统会 panic。&lt;/p&gt;</description></item><item><title>设备树调试的几个检查点</title><link>https://yun7211.github.io/embedded-linux/drivers-dts/device-tree-debugging/</link><pubDate>Mon, 18 May 2026 10:10:00 +0800</pubDate><guid>https://yun7211.github.io/embedded-linux/drivers-dts/device-tree-debugging/</guid><description>&lt;h2 id="为什么设备树容易出问题"&gt;为什么设备树容易出问题&lt;/h2&gt;
+&lt;p&gt;设备树描述硬件，但它本身不会证明硬件真的可用。一个节点看起来完整，也可能因为地址、时钟、中断、复位或引脚复用配置错误而导致驱动 probe 失败。&lt;/p&gt;
+&lt;p&gt;调试设备树时，可以先围绕几个高频字段检查。&lt;/p&gt;
+&lt;h2 id="compatible"&gt;compatible&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;compatible&lt;/code&gt; 决定设备节点能否匹配到驱动。驱动侧通常通过 &lt;code&gt;of_device_id&lt;/code&gt; 表匹配字符串。&lt;/p&gt;
+&lt;p&gt;如果驱动没有 probe，先检查：&lt;/p&gt;</description></item><item><title>嵌入式 Linux 启动流程速记</title><link>https://yun7211.github.io/embedded-linux/boot-system/linux-boot-flow/</link><pubDate>Mon, 18 May 2026 10:00:00 +0800</pubDate><guid>https://yun7211.github.io/embedded-linux/boot-system/linux-boot-flow/</guid><description>&lt;h2 id="启动主线"&gt;启动主线&lt;/h2&gt;
+&lt;p&gt;嵌入式 Linux 的启动过程可以先抓住一条主线：硬件上电后，Boot ROM 找到第一阶段启动程序，随后加载 U-Boot，再由 U-Boot 加载 Linux Kernel、设备树和根文件系统。&lt;/p&gt;
+&lt;p&gt;完整路径通常是：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-txt" data-lang="txt"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Power On -&amp;gt; Boot ROM -&amp;gt; SPL/TPL -&amp;gt; U-Boot -&amp;gt; Kernel -&amp;gt; init -&amp;gt; user space
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;不同芯片的细节会变化，但定位问题时先把当前卡在哪一段确认清楚，排查效率会高很多。&lt;/p&gt;</description></item></channel></rss>

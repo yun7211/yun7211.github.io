@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>调试与质量 on Yun 的个人博客</title><link>https://yun7211.github.io/c-language/debug-quality/</link><description>Recent content in 调试与质量 on Yun 的个人博客</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Mon, 18 May 2026 11:40:00 +0800</lastBuildDate><atom:link href="https://yun7211.github.io/c-language/debug-quality/index.xml" rel="self" type="application/rss+xml"/><item><title>C 代码审查清单</title><link>https://yun7211.github.io/c-language/debug-quality/code-review-checklist/</link><pubDate>Mon, 18 May 2026 11:40:00 +0800</pubDate><guid>https://yun7211.github.io/c-language/debug-quality/code-review-checklist/</guid><description>&lt;h2 id="审查目标"&gt;审查目标&lt;/h2&gt;
+&lt;p&gt;C 代码审查不是挑风格问题，而是提前发现运行时成本最高的问题：内存错误、资源泄漏、接口歧义、错误路径遗漏和不可测试的全局状态。&lt;/p&gt;
+&lt;h2 id="接口语义"&gt;接口语义&lt;/h2&gt;
+&lt;p&gt;先看函数接口是否清楚：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;参数能否为 &lt;code&gt;NULL&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;返回值如何表达错误&lt;/li&gt;
+&lt;li&gt;调用方是否负责释放资源&lt;/li&gt;
+&lt;li&gt;输出参数失败时是否有效&lt;/li&gt;
+&lt;li&gt;函数是否修改传入缓冲区&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;接口语义不清楚时，后续实现再漂亮也容易出问题。&lt;/p&gt;</description></item><item><title>C 内存问题排查清单</title><link>https://yun7211.github.io/c-language/debug-quality/debugging-memory-bugs/</link><pubDate>Mon, 18 May 2026 10:50:00 +0800</pubDate><guid>https://yun7211.github.io/c-language/debug-quality/debugging-memory-bugs/</guid><description>&lt;h2 id="常见现象"&gt;常见现象&lt;/h2&gt;
+&lt;p&gt;C 内存问题经常表现得很绕：崩溃点不一定是出错点，今天能复现的问题明天可能消失，打开日志后问题也可能变化。&lt;/p&gt;
+&lt;p&gt;常见类型包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;数组或缓冲区越界&lt;/li&gt;
+&lt;li&gt;使用已经释放的指针&lt;/li&gt;
+&lt;li&gt;重复释放&lt;/li&gt;
+&lt;li&gt;未初始化读取&lt;/li&gt;
+&lt;li&gt;资源泄漏&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="先缩小范围"&gt;先缩小范围&lt;/h2&gt;
+&lt;p&gt;不要一开始就盯着崩溃现场。先确认最近改动、输入数据规模、线程数量、编译优化级别和是否只在特定平台出现。&lt;/p&gt;</description></item></channel></rss>

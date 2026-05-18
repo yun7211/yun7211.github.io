@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hugo on Yun 的个人博客</title><link>https://yun7211.github.io/tags/hugo/</link><description>Recent content in Hugo on Yun 的个人博客</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Mon, 18 May 2026 09:00:00 +0800</lastBuildDate><atom:link href="https://yun7211.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>用 Hugo 搭建个人博客的第一步</title><link>https://yun7211.github.io/posts/hugo-blog-setup/</link><pubDate>Mon, 18 May 2026 09:00:00 +0800</pubDate><guid>https://yun7211.github.io/posts/hugo-blog-setup/</guid><description>&lt;h2 id="背景"&gt;背景&lt;/h2&gt;
+&lt;p&gt;我希望博客能长期维护，文章源文件可以直接用 Git 管理，部署流程尽量简单，所以选择了 Hugo、Markdown 和 GitHub Pages。&lt;/p&gt;
+&lt;p&gt;这一套方案的核心好处是：文章就是普通 Markdown 文件，构建结果是静态页面，不依赖数据库，也方便以后迁移。&lt;/p&gt;
+&lt;h2 id="第一版目标"&gt;第一版目标&lt;/h2&gt;
+&lt;p&gt;第一版不追求复杂功能，先完成几个基础能力：&lt;/p&gt;</description></item></channel></rss>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>复现 on Yun 的个人博客</title><link>https://yun7211.github.io/tags/%E5%A4%8D%E7%8E%B0/</link><description>Recent content in 复现 on Yun 的个人博客</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Mon, 18 May 2026 11:20:00 +0800</lastBuildDate><atom:link href="https://yun7211.github.io/tags/%E5%A4%8D%E7%8E%B0/index.xml" rel="self" type="application/rss+xml"/><item><title>实验记录应该写什么</title><link>https://yun7211.github.io/research/experiment-reproduction/experiment-log-template/</link><pubDate>Mon, 18 May 2026 11:20:00 +0800</pubDate><guid>https://yun7211.github.io/research/experiment-reproduction/experiment-log-template/</guid><description>&lt;h2 id="实验记录的价值"&gt;实验记录的价值&lt;/h2&gt;
+&lt;p&gt;实验记录不是流水账，而是为了让未来的自己能够复现当时的判断。好的实验记录应该能回答：为什么做这个实验，怎么做的，结果是什么，是否支持原假设。&lt;/p&gt;
+&lt;h2 id="推荐字段"&gt;推荐字段&lt;/h2&gt;
+&lt;p&gt;可以固定记录这些字段：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-txt" data-lang="txt"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;实验日期：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;实验目标：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;假设：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;环境：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;输入数据：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;操作步骤：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;关键参数：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;结果：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;异常：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;结论：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;下一步：
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;字段不一定每次都写满，但假设、环境、结果和结论最好保留。&lt;/p&gt;
+&lt;h2 id="环境记录"&gt;环境记录&lt;/h2&gt;
+&lt;p&gt;环境包括硬件、系统版本、依赖版本、编译参数和数据版本。很多复现失败不是方法错了，而是环境差异没有记录。&lt;/p&gt;</description></item></channel></rss>

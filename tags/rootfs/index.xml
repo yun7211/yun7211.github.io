@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>RootFS on Yun 的个人博客</title><link>https://yun7211.github.io/tags/rootfs/</link><description>Recent content in RootFS on Yun 的个人博客</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Mon, 18 May 2026 10:20:00 +0800</lastBuildDate><atom:link href="https://yun7211.github.io/tags/rootfs/index.xml" rel="self" type="application/rss+xml"/><item><title>根文件系统构建笔记</title><link>https://yun7211.github.io/embedded-linux/boot-system/rootfs-build-notes/</link><pubDate>Mon, 18 May 2026 10:20:00 +0800</pubDate><guid>https://yun7211.github.io/embedded-linux/boot-system/rootfs-build-notes/</guid><description>&lt;h2 id="根文件系统承担什么"&gt;根文件系统承担什么&lt;/h2&gt;
+&lt;p&gt;Kernel 启动后需要挂载根文件系统，并运行第一个用户态进程。根文件系统里至少要有基础目录、初始化程序、命令工具、动态库、配置文件和设备节点。&lt;/p&gt;
+&lt;p&gt;最小系统常见目录包括：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-txt" data-lang="txt"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;/bin
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;/sbin
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;/etc
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;/lib
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;/dev
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;/proc
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;/sys
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;/tmp
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;/var
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="init"&gt;init&lt;/h2&gt;
+&lt;p&gt;Kernel 默认会尝试运行 &lt;code&gt;/sbin/init&lt;/code&gt;、&lt;code&gt;/etc/init&lt;/code&gt;、&lt;code&gt;/bin/init&lt;/code&gt; 或 &lt;code&gt;/bin/sh&lt;/code&gt;。如果这些路径都不存在，系统会 panic。&lt;/p&gt;</description></item></channel></rss>

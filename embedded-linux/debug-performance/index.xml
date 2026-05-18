@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>调试与性能 on Yun 的个人博客</title><link>https://yun7211.github.io/embedded-linux/debug-performance/</link><description>Recent content in 调试与性能 on Yun 的个人博客</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Mon, 18 May 2026 11:30:00 +0800</lastBuildDate><atom:link href="https://yun7211.github.io/embedded-linux/debug-performance/index.xml" rel="self" type="application/rss+xml"/><item><title>Kernel panic 排查记录模板</title><link>https://yun7211.github.io/embedded-linux/debug-performance/kernel-panic-debugging/</link><pubDate>Mon, 18 May 2026 11:30:00 +0800</pubDate><guid>https://yun7211.github.io/embedded-linux/debug-performance/kernel-panic-debugging/</guid><description>&lt;h2 id="先保留现场"&gt;先保留现场&lt;/h2&gt;
+&lt;p&gt;Kernel panic 出现时，第一件事不是立刻改代码，而是把现场保存下来。串口完整日志、内核版本、设备树版本、启动参数、复现步骤和最近改动都应该保留。&lt;/p&gt;
+&lt;p&gt;最小记录清单：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;panic 完整日志&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;bootargs&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Kernel commit 或版本号&lt;/li&gt;
+&lt;li&gt;DTB 来源&lt;/li&gt;
+&lt;li&gt;根文件系统版本&lt;/li&gt;
+&lt;li&gt;外设连接状态&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="看最后一个有效栈"&gt;看最后一个有效栈&lt;/h2&gt;
+&lt;p&gt;panic 日志里最有价值的是调用栈和触发点。先找到 &lt;code&gt;Call trace&lt;/code&gt;，再判断是空指针、非法地址、BUG_ON、oops 还是 watchdog。&lt;/p&gt;</description></item></channel></rss>

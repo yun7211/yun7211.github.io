@@ -1,0 +1,33 @@
+<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>一套简单的 Markdown 写作流程 | Yun 的个人博客</title><meta name=description content="用选题、提纲、初稿、预览和校对五步，把技术文章写得更稳。"><meta name=author content="Yun"><link rel=canonical href=https://yun7211.github.io/posts/markdown-writing-workflow/><link rel=icon href=/favicon.svg type=image/svg+xml><meta property="og:title" content="一套简单的 Markdown 写作流程 | Yun 的个人博客"><meta property="og:description" content="用选题、提纲、初稿、预览和校对五步，把技术文章写得更稳。"><meta property="og:type" content="article"><meta property="og:url" content="https://yun7211.github.io/posts/markdown-writing-workflow/"><meta property="og:image" content="https://yun7211.github.io/images/site-cover.svg"><meta name=twitter:card content="summary_large_image"><script>(function(){var e=localStorage.getItem("theme")||"light",t=localStorage.getItem("lang")||"zh";document.documentElement.dataset.theme=e,document.documentElement.dataset.lang=t})()</script><link rel=stylesheet href=/css/main.min.eae4c064062d0dba49e9ee3a2de49af15b72acbc4084fd760859ff387fb7d85e.css integrity="sha256-6uTAZAYtDbpJ6e46LeSa8VtyrLxAhP12CFn/OH+32F4="><script defer src=/js/main.min.6ad6534954752dfbeedb096587d2470bfa249bfa612aeb84029201e75b76b4ac.js integrity="sha256-atZTSVR1Lfvu2wllh9JHC/okm/phKuuEApIB51t2tKw="></script></head><body><a class=skip-link href=#main>跳到正文</a><header class=site-header><div class="container header-inner"><a class=brand href=/ aria-label="Yun 的个人博客"><span class=brand-mark>Y</span>
+<span class=brand-text>Yun 的个人博客</span></a><nav class=main-nav aria-label=主导航 data-i18n-attr=aria-label:nav.aria><a href=/ data-i18n=nav.home>首页</a>
+<a href=/posts/ data-i18n=nav.posts>文章</a>
+<a href=/embedded-linux/ data-i18n=nav.embedded>嵌入式 Linux</a>
+<a href=/c-language/ data-i18n=nav.c>C 语言</a>
+<a href=/research/ data-i18n=nav.research>研究课题</a>
+<a href=/ai/ data-i18n=nav.ai>AI</a>
+<a href=/projects/ data-i18n=nav.projects>项目</a>
+<a href=/about/ data-i18n=nav.about>关于</a></nav><div class=header-tools aria-label=站点工具 data-i18n-attr=aria-label:tools.aria><button class=search-open-button type=button data-search-open>
+<span aria-hidden=true>⌕</span>
+<span data-i18n=search.button>搜索</span>
+</button>
+<label class=tool-select-label><span data-i18n=tools.language>语言</span>
+<select class=tool-select data-lang-select aria-label=Language><option value=zh>中文</option><option value=en>English</option></select>
+</label><label class=tool-select-label><span data-i18n=tools.theme>主题</span>
+<select class=tool-select data-theme-select aria-label=Theme><option value=light data-i18n=theme.light>亮色</option><option value=dark data-i18n=theme.dark>暗色</option></select></label></div></div></header><div class=search-overlay data-search-overlay hidden></div><section class=search-panel data-search-panel data-search-index=/index.json role=dialog aria-modal=true aria-labelledby=search-title hidden><div class=search-panel-header><div><p class=eyebrow>Search</p><h2 id=search-title data-i18n=search.title>站内搜索</h2></div><button class=search-close-button type=button data-search-close aria-label="Close search">×</button></div><label class=search-input-label><span data-i18n=search.label>关键词</span>
+<input class=search-input type=search data-search-input data-i18n-attr=placeholder:search.placeholder placeholder=搜索文章、栏目、标签></label><p class=search-status data-search-status data-i18n=search.hint>输入关键词后显示匹配内容。</p><div class=search-results data-search-results></div></section><main id=main class=site-main><article class=article><header class="article-header container narrow"><p class=eyebrow>个人博客搭建</p><h1>一套简单的 Markdown 写作流程</h1><p>用选题、提纲、初稿、预览和校对五步，把技术文章写得更稳。</p><div class=article-meta><time datetime=2026-05-18>2026-05-18</time>
+<span>学习笔记</span>
+<span><span data-i18n=meta.readingTimePrefix>约</span> 1 <span data-i18n=meta.readingTimeSuffix>分钟</span></span>
+<span><span data-i18n=meta.pageViews>本文阅读</span> <strong data-page-views>0</strong> <span data-i18n=meta.times>次</span></span>
+<span><span data-i18n=meta.totalViews>本站累计阅读</span> <strong data-total-views>0</strong> <span data-i18n=meta.times>次</span></span></div></header><div class="container article-shell"><aside class="toc article-toc" aria-label=文章目录><strong>目录</strong><nav id=TableOfContents><ul><li><a href=#为什么需要流程>为什么需要流程</a></li><li><a href=#五步写作法>五步写作法</a></li><li><a href=#文章模板>文章模板</a></li><li><a href=#小结>小结</a></li></ul></nav></aside><div class=article-body><h2 id=为什么需要流程>为什么需要流程</h2><p>技术文章很容易变成命令堆砌。写之前先想清楚读者、问题和结果，文章会更容易读，也更方便未来的自己回看。</p><h2 id=五步写作法>五步写作法</h2><p>第一步是选题。选题可以来自今天解决的问题、刚学会的工具、项目里的坑，或者一段值得保留的思考。</p><p>第二步是列提纲。提纲不需要复杂，只要回答三个问题：背景是什么，问题是什么，最后得到什么结果。</p><p>第三步是写初稿。初稿阶段先追求完整，不急着打磨句子。</p><p>第四步是本地预览。Hugo 的本地预览可以及时发现标题层级、代码块、图片路径和链接问题。</p><p>第五步是校对和发布。发布前检查草稿状态、日期、标签、图片、链接和隐私信息。</p><h2 id=文章模板>文章模板</h2><div class=highlight><pre tabindex=0 class=chroma><code class=language-md data-lang=md><span class=line><span class=cl><span class=gu>## 背景
+</span></span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=gu>## 问题
+</span></span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=gu>## 过程
+</span></span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=gu>## 结果
+</span></span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=gu>## 总结
+</span></span></span></code></pre></div><p>这个模板很朴素，但足够覆盖大多数学习笔记和项目复盘。</p><h2 id=小结>小结</h2><p>写作流程的价值不是限制表达，而是减少启动成本。每次都从同一套结构开始，长期会更容易坚持。</p></div></div><footer class="container narrow article-tags"><a class=tag href=/tags/markdown/>Markdown</a>
+<a class=tag href=/tags/%E5%86%99%E4%BD%9C/>写作</a>
+<a class=tag href=/tags/%E5%B7%A5%E4%BD%9C%E6%B5%81/>工作流</a></footer></article></main><footer class=site-footer><div class="container footer-inner"><p>© 2026 Yun. CC BY-NC-SA 4.0</p><nav aria-label=页脚导航><a href=/index.xml>RSS</a>
+<a href=https://github.com/yun7211>GitHub</a></nav></div></footer></body></html>
