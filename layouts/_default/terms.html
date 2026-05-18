@@ -1,0 +1,20 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Taxonomy</p>
+    <h1>{{ .Title }}</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container term-grid">
+    {{ range .Data.Terms.ByCount }}
+      <a class="topic" href="{{ .Page.RelPermalink }}">
+        <strong>{{ .Page.Title }}</strong>
+        <span>{{ .Count }} 篇</span>
+      </a>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+

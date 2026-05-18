@@ -1,0 +1,20 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Topic</p>
+    <h1>{{ .Title }}</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container post-grid">
+    {{ range .Paginator.Pages }}
+      {{ partial "post-card.html" . }}
+    {{ end }}
+  </div>
+  <div class="container">
+    {{ partial "pagination.html" . }}
+  </div>
+</section>
+{{ end }}
+

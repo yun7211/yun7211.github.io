@@ -1,0 +1,116 @@
+{{ define "main" }}
+{{ $posts := where site.RegularPages "Section" "in" site.Params.mainSections }}
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">Hugo + Markdown + GitHub Pages</p>
+      <h1>{{ site.Title }}</h1>
+      <p data-i18n="home.description">{{ site.Params.description }}</p>
+      <div class="hero-actions">
+        <a class="button primary" href="{{ "/posts/" | relURL }}" data-i18n="home.readPosts">阅读文章</a>
+        <a class="button" href="{{ "/about/" | relURL }}" data-i18n="home.aboutAuthor">了解作者</a>
+      </div>
+    </div>
+    <figure class="hero-media">
+      <img src="{{ site.Params.defaultCover | relURL }}" alt="写作桌面、代码窗口和笔记的插画">
+    </figure>
+  </div>
+</section>
+
+<section class="section profile-section">
+  <div class="container profile-grid">
+    <div class="profile-card">
+      <img class="avatar" src="{{ site.Params.profile.avatar | relURL }}" alt="{{ site.Params.profile.name }} 的头像">
+      <div>
+        <p class="eyebrow" data-i18n="profile.eyebrow">个人信息</p>
+        <h2>{{ site.Params.profile.name }}</h2>
+        <p data-i18n="profile.role">{{ site.Params.profile.role }}</p>
+      </div>
+    </div>
+    <dl class="profile-details">
+      <div>
+        <dt data-i18n="profile.email">邮箱</dt>
+        <dd><a href="mailto:{{ site.Params.profile.email }}">{{ site.Params.profile.email }}</a></dd>
+      </div>
+      <div>
+        <dt data-i18n="profile.education">教育经历</dt>
+        <dd data-i18n="profile.educationValue">{{ site.Params.profile.education }}</dd>
+      </div>
+      <div>
+        <dt data-i18n="profile.motto">座右铭</dt>
+        <dd data-i18n="profile.mottoValue">{{ site.Params.profile.motto }}</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<section class="section accent-band">
+  <div class="container section-heading">
+    <p class="eyebrow">Columns</p>
+    <h2 data-i18n="columns.title">主栏目与子栏目</h2>
+  </div>
+  <div class="container column-grid">
+    <article class="column-card">
+      <h3><a href="{{ "/embedded-linux/" | relURL }}" data-i18n="nav.embedded">嵌入式 Linux</a></h3>
+      <div class="subtopic-list">
+        <a href="{{ "/embedded-linux/boot-system/" | relURL }}" data-i18n="sub.embedded.boot">启动与系统构建</a>
+        <a href="{{ "/embedded-linux/drivers-dts/" | relURL }}" data-i18n="sub.embedded.drivers">驱动与设备树</a>
+        <a href="{{ "/embedded-linux/debug-performance/" | relURL }}" data-i18n="sub.embedded.debug">调试与性能</a>
+      </div>
+    </article>
+    <article class="column-card">
+      <h3><a href="{{ "/c-language/" | relURL }}" data-i18n="nav.c">C 语言</a></h3>
+      <div class="subtopic-list">
+        <a href="{{ "/c-language/pointer-memory/" | relURL }}" data-i18n="sub.c.pointer">指针与内存</a>
+        <a href="{{ "/c-language/module-interface/" | relURL }}" data-i18n="sub.c.module">模块与接口</a>
+        <a href="{{ "/c-language/debug-quality/" | relURL }}" data-i18n="sub.c.debug">调试与质量</a>
+      </div>
+    </article>
+    <article class="column-card">
+      <h3><a href="{{ "/ai/" | relURL }}" data-i18n="nav.ai">AI</a></h3>
+      <div class="subtopic-list">
+        <a href="{{ "/ai/model-basics/" | relURL }}" data-i18n="sub.ai.model">模型基础</a>
+        <a href="{{ "/ai/prompt-agents/" | relURL }}" data-i18n="sub.ai.prompt">提示词与智能体</a>
+        <a href="{{ "/ai/ai-engineering/" | relURL }}" data-i18n="sub.ai.engineering">AI 工程实践</a>
+      </div>
+    </article>
+    <article class="column-card">
+      <h3><a href="{{ "/research/" | relURL }}" data-i18n="nav.research">研究课题</a></h3>
+      <div class="subtopic-list">
+        <a href="{{ "/research/topic-literature/" | relURL }}" data-i18n="sub.research.topic">选题与文献</a>
+        <a href="{{ "/research/experiment-reproduction/" | relURL }}" data-i18n="sub.research.experiment">实验与复现</a>
+        <a href="{{ "/research/writing-review/" | relURL }}" data-i18n="sub.research.writing">写作与复盘</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container section-heading">
+    <p class="eyebrow">Latest</p>
+    <h2 data-i18n="home.latest">最新内容</h2>
+  </div>
+  <div class="container post-grid">
+    {{ range first 6 $posts }}
+      {{ partial "post-card.html" . }}
+    {{ end }}
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split">
+    <div>
+      <p class="eyebrow">Topics</p>
+      <h2 data-i18n="home.topics">写作方向</h2>
+    </div>
+    <div class="topic-grid">
+      {{ range site.Taxonomies.categories.ByCount }}
+        <a class="topic" href="{{ .Page.RelPermalink }}">
+          <strong>{{ .Page.Title }}</strong>
+          <span>{{ .Count }} 篇</span>
+        </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

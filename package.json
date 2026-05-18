@@ -1,0 +1,12 @@
+{
+  "name": "yun-hugo-blog",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "hugo server -D --disableFastRender",
+    "build": "hugo --gc --minify",
+    "check": "hugo --gc --minify --printI18nWarnings --printPathWarnings"
+  },
+  "devDependencies": {}
+}
+

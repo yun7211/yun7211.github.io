@@ -1,0 +1,30 @@
+{{ define "main" }}
+<article class="article">
+  <header class="article-header container narrow">
+    <p class="eyebrow">{{ with .Params.series }}{{ index . 0 }}{{ else }}Post{{ end }}</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p>{{ . }}</p>{{ end }}
+    {{ partial "meta.html" . }}
+  </header>
+
+  <div class="container article-shell{{ if not .Params.toc }} no-toc{{ end }}">
+    {{ if .Params.toc }}
+      <aside class="toc article-toc" aria-label="文章目录">
+        <strong>目录</strong>
+        {{ .TableOfContents }}
+      </aside>
+    {{ end }}
+    <div class="article-body">
+      {{ .Content }}
+    </div>
+  </div>
+
+  {{ with .Params.tags }}
+    <footer class="container narrow article-tags">
+      {{ range . }}
+        <a class="tag" href="{{ (printf "/tags/%s/" (. | urlize)) | relURL }}">{{ . }}</a>
+      {{ end }}
+    </footer>
+  {{ end }}
+</article>
+{{ end }}

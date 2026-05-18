@@ -1,0 +1,47 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">{{ .Section | default "Archive" }}</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p>{{ . }}</p>{{ end }}
+  </div>
+</section>
+
+{{ with .Content }}
+<section class="section intro-section">
+  <div class="container narrow article-body">
+    {{ . }}
+  </div>
+</section>
+{{ end }}
+
+{{ with .Params.subtopics }}
+<section class="section subtopics-section">
+  <div class="container section-heading">
+    <p class="eyebrow">Subcolumns</p>
+    <h2 data-i18n="columns.title">主栏目与子栏目</h2>
+  </div>
+  <div class="container subtopic-grid">
+    {{ range . }}
+      <article class="subtopic-card" id="{{ .id }}">
+        <h2><a href="{{ .url | relURL }}">{{ .title }}</a></h2>
+        <p>{{ .description }}</p>
+      </article>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+<section class="section">
+  <div class="container post-grid">
+    {{ range .Paginator.Pages }}
+      {{ partial "post-card.html" . }}
+    {{ else }}
+      <p class="empty-state">这里暂时还没有内容。</p>
+    {{ end }}
+  </div>
+  <div class="container">
+    {{ partial "pagination.html" . }}
+  </div>
+</section>
+{{ end }}
