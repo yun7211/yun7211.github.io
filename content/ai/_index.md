@@ -2,6 +2,13 @@
 title = "AI"
 description = "记录 AI 模型基础、提示词设计、智能体工作流和工程化实践。"
 
+[menu.main]
+  name = "AI"
+  weight = 50
+
+  [menu.main.params]
+    icon = "brain"
+
 [[subtopics]]
 id = "model-basics"
 title = "模型基础"

@@ -2,6 +2,13 @@
 title = "项目"
 date = 2026-05-18T20:45:00+08:00
 description = "整理正在做和已经完成的项目。"
+
+[menu.main]
+  name = "项目 | Projects"
+  weight = 60
+
+  [menu.main.params]
+    icon = "apps"
 +++
 
 这里会整理我做过的项目、实验和作品。每个项目尽量记录目标、技术栈、关键取舍和复盘。

@@ -2,6 +2,13 @@
 title = "关于"
 date = 2026-05-18T20:40:00+08:00
 description = "关于这个博客和作者。"
+
+[menu.main]
+  name = "关于 | About"
+  weight = 70
+
+  [menu.main.params]
+    icon = "user"
 +++
 
 你好，我是 Yun。

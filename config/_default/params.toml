@@ -1,0 +1,57 @@
+mainSections   = ["posts", "embedded-linux", "c-language", "ai", "research"]
+rssFullContent = true
+
+[footer]
+  since = 2025
+
+[sidebar]
+  emoji    = ""
+  subtitle = "把复杂问题拆小，把长期积累写清楚。"
+  avatar   = "/images/avatar.svg"
+  compact  = false
+
+[article]
+  headingAnchor = false
+  math          = false
+  toc           = true
+  readingTime   = true
+
+  [article.list]
+    showTags = false
+
+  [article.license]
+    enabled = true
+    default = "Licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)"
+
+[widgets]
+  homepage = [
+    { type = "search" },
+    { type = "archives", params = { limit = 5 } },
+    { type = "categories", params = { limit = 10 } },
+  ]
+  page     = [{ type = "toc" }]
+
+[colorScheme]
+  toggle  = true
+  default = "auto"
+
+[imageProcessing]
+  autoOrient = false
+
+  [imageProcessing.content]
+    widths  = [800, 1600, 2400]
+    enabled = true
+
+  [imageProcessing.thumbnail]
+    enabled = true
+
+[comments]
+  enabled  = false
+  provider = "disqus"
+
+[cookies]
+  enabled = false
+
+[opengraph.twitter]
+  site = ""
+  card = "summary_large_image"

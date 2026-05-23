@@ -2,6 +2,13 @@
 title = "嵌入式 Linux"
 description = "记录嵌入式 Linux 的启动流程、驱动调试、系统构建、交叉编译和板级实践。"
 
+[menu.main]
+  name = "嵌入式 Linux | Embedded Linux"
+  weight = 20
+
+  [menu.main.params]
+    icon = "cpu"
+
 [[subtopics]]
 id = "boot-system"
 title = "启动与系统构建"

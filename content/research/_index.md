@@ -2,6 +2,13 @@
 title = "研究课题"
 description = "记录研究选题、文献阅读、实验设计、复现实验、数据分析和论文写作。"
 
+[menu.main]
+  name = "研究课题 | Research"
+  weight = 40
+
+  [menu.main.params]
+    icon = "flask"
+
 [[subtopics]]
 id = "topic-literature"
 title = "选题与文献"

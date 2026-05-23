@@ -2,6 +2,13 @@
 title = "C 语言"
 description = "记录 C 语言的指针、内存、接口设计、模块化、调试和工程实践。"
 
+[menu.main]
+  name = "C 语言 | C Language"
+  weight = 30
+
+  [menu.main.params]
+    icon = "code"
+
 [[subtopics]]
 id = "pointer-memory"
 title = "指针与内存"

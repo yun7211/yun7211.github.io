@@ -3,6 +3,8 @@ title = "{{ replace .File.ContentBaseName "-" " " | title }}"
 date = "{{ .Date }}"
 draft = true
 description = ""
+subtitle = ""
+image = ""
 tags = []
 categories = []
 toc = true
@@ -17,4 +19,3 @@ toc = true
 ## 结果
 
 ## 总结
-

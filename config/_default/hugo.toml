@@ -1,0 +1,25 @@
+baseURL = "https://yun7211.github.io/"
+locale = "zh-cn"
+title = "Yun 的个人博客"
+defaultContentLanguage = "zh-cn"
+hasCJKLanguage = true
+enableRobotsTXT = true
+enableEmoji = true
+summaryLength = 120
+timeZone = "Asia/Shanghai"
+
+theme = "hugo-theme-stack"
+
+[pagination]
+  pagerSize = 5
+
+[outputs]
+  home = ["HTML", "RSS"]
+
+[permalinks]
+  posts = "/posts/:slug/"
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  series = "series"
